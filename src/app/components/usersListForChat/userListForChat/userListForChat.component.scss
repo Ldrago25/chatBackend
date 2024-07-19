@@ -1,0 +1,41 @@
+.contentList {
+    width: 100%;
+    top: 5rem;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+}
+
+.BodyList {
+    border-style: solid;
+    border-color: rgb(241, 236, 236);
+    border-width: 1px;
+    border-radius: 5px;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    padding-top: 1rem;
+    width: 40%;
+    top: 5rem;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+}
+
+.userRow {
+    cursor: pointer;
+    width: 100%;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    img {
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+    }
+}

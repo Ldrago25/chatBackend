@@ -1,0 +1,43 @@
+<section class="form-container">
+    <article class="form-content">
+        <form [formGroup]="formGroup" (ngSubmit)="saveData()">
+            <h3>Hola</h3>
+            <p>Registra tus datos</p>
+            <div class="form-control">
+                <span class="p-input-icon-left">
+          <input type="text" pInputText placeholder="Nombres" formControlName="firstName"/>
+        </span>
+            </div>
+            <div class="form-control">
+                <span class="p-input-icon-left">
+          <input type="text" pInputText placeholder="Apellidos" formControlName="lastName"/>
+        </span>
+            </div>
+            <div class="form-control">
+                <span class="p-input-icon-left">
+          <i class="pi pi-user"></i>
+          <input type="text" pInputText placeholder="Correo" formControlName="email"/>
+        </span>
+            </div>
+            <div class="form-control">
+                <span class="p-input-icon-left">
+          <i class="pi pi-key"></i>
+          <input type="password" pInputText placeholder="Contraseña" formControlName="password">
+        </span>
+            </div>
+            <div class="form-control">
+                <p-fileUpload (onSelect)="onUpload($event)" [multiple]="false" [fileLimit]="1" accept="image/*" [maxFileSize]="1000000" [showCancelButton]="false" [showUploadButton]="false" (onRemove)="removeFile()">
+                </p-fileUpload>
+            </div>
+            <div class="form-control">
+                <p-button type="submit" label="Registrarse" [disabled]="formGroup.invalid||loading"></p-button>
+            </div>
+            <div class="form-control">
+                <p>¿ Ya tienes una cuenta ? <a routerLink="/login">Iniciar Sesión</a></p>
+            </div>
+        </form>
+    </article>
+    <article class="bg-blue"></article>
+    <article class="bg-orange"></article>
+    <article class="bg-green"></article>
+</section>
